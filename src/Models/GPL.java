@@ -4,7 +4,7 @@ import java.time.LocalDateTime;
 
 import utils.ArroundPrice;
 
-public class GPL extends Vehicule {
+public class GPL extends Vehicule implements MajREDU {
 	
     public GPL(TypeVehicule type) {
 		super(type);
@@ -20,7 +20,7 @@ public class GPL extends Vehicule {
         for (PriceCalcul price : PriceCalcul.values()) {
             if (price.isApplicable(duration)) {
                 amount= price.calculate(duration);
-                divide = amount *0.07;
+                divide = amount * majoration;
                 return ArroundPrice.round(amount+divide);
             }
         }

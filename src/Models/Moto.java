@@ -3,7 +3,7 @@ package Models;
 import java.time.LocalDateTime;
 import utils.ArroundPrice;
 
-public class Moto extends Vehicule {
+public class Moto extends Vehicule implements MajREDU {
 
 	  public Moto(TypeVehicule type) {
 		  
@@ -17,7 +17,7 @@ public class Moto extends Vehicule {
 		  long duration = calculateDuration(beginDate, endDate);
 	        for (PriceCalcul price : PriceCalcul.values()) {
 	            if (price.isApplicable(duration)) {
-	                return ArroundPrice.round(price.calculate(duration)/2.0);
+	                return ArroundPrice.round(price.calculate(duration)*reduction);
 	            }
 	        }
 	        return 0d;

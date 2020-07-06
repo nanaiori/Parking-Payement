@@ -18,6 +18,7 @@ public class Car extends Vehicule {
 		 long duration = calculateDuration(beginDate, endDate);
 	        for (PriceCalcul price : PriceCalcul.values()) {
 	            if (price.isApplicable(duration)) {
+	            
 	                return ArroundPrice.round(price.calculate(duration));
 	            }
 	        }
