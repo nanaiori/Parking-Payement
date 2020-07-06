@@ -12,7 +12,7 @@ public class Facture {
 
 	public static void main(String[] args) {
 		
-		Vehicule v = new GPL(TypeVehicule.ESSENCE);
+		Vehicule v = new GPL(TypeVehicule.GPL);
 		Vehicule v1 = new Car(TypeVehicule.ESSENCE);
 		Vehicule v2 = new Moto(TypeVehicule.ESSENCE);
 		

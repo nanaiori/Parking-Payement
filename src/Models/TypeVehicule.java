@@ -2,5 +2,6 @@ package Models;
 
 public enum TypeVehicule {
  
-	 ESSENCE;
+	 ESSENCE,
+	  GPL;
 }
